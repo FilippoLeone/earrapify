@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <title>Earrapify - Home</title>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Earrapify</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">FAQ</a>
+            </li>
+            </ul>
+        </div>
+        </nav>
+    </div>
+  </head>
+    <body>
+
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="display-4">Hey! 👋</h1>
+            <p class="lead">Earrapify your songs 🗣️! Upload and select the volume boost level you want to apply to your song.</p>
+            <hr class="my-4">
+            <p>🎥 Cool to know trick: you can also use a YouTube link.</p>
+            
+            <label for="audioLevel" id="audioLevelText">Boost level: 50 dB.</label>
+            <input type="range" class="custom-range" min="0" max="100" step="1" id="audioLevel" oninput="setAudioLabel()">
+
+            <!-- Text field for youtube links -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="YouTube link" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="button-addon2">Earrapify</button>
+                </div>
+            </div>
+            <!-- File input -->
+            <form>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text btn-primary" id="inputFile">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputFile" onchange="setFileName();uploadFile(this);">
+                        <label id="fileLabel" class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div>     
+            </form>   
+        </div> 
+        <div id="download-block" class="container-fluid" style="display: none;"> 
+            <center><h2>Your download is ready!</h2></center>
+            <a id="downloadButton" type="button" class="btn btn-block btn-success">Download</a>
+        </div>
+    </div>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/popper.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/main.js"></script>
+    </body>
+</html>
