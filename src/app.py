@@ -1,4 +1,4 @@
-from wsgiref.simple_server import make_server
+from asgiref.wsgi import WsgiToAsgi
 from pyramid.config import Configurator
 from pyramid.response import Response
 import os
@@ -14,11 +14,8 @@ def config_routes():
         config.include('pyramid_chameleon')
         return config.make_wsgi_app()
 
-if __name__ == '__main__':
-    throttle_process = True
-    if throttle_process:
-        subprocess.Popen(["cpulimit", "--exe", "ffmpeg", "--limit=10"])
-        subprocess.Popen(["cpulimit", "--exe", "python", "--limit=10"])
-    app = config_routes()
-    server = make_server('0.0.0.0', 8000, app)
-    server.serve_forever()      
+throttle_process = True
+if throttle_process:
+    subprocess.Popen(["cpulimit", "--exe", "ffmpeg", "--limit=10"])
+app = config_routes()
+app = WsgiToAsgi(app)

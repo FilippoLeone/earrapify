@@ -2,3 +2,5 @@ pydub
 youtube-dl
 pyramid
 pyramid-chameleon
+asgiref
+uvicorn
