@@ -17,7 +17,8 @@ def config_routes():
 if __name__ == '__main__':
     throttle_process = True
     if throttle_process:
-        subprocess.Popen(["cpulimit", "--exe", "ffmpeg", "--limit=30"])
+        subprocess.Popen(["cpulimit", "--exe", "ffmpeg", "--limit=10"])
+        subprocess.Popen(["cpulimit", "--exe", "python", "--limit=10"])
     app = config_routes()
     server = make_server('0.0.0.0', 8000, app)
     server.serve_forever()      
