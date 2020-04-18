@@ -19,7 +19,7 @@
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">FAQ</a>
+                <a class="nav-link" href="/faq">FAQ</a>
             </li>
             </ul>
         </div>
@@ -35,8 +35,8 @@
             <hr class="my-4">
             <p>🎥 Cool to know trick: you can also use a YouTube link.</p>
             
-            <label for="audioLevel" id="audioLevelText">Boost level: 50 dB.</label>
-            <input type="range" class="custom-range" min="0" max="100" step="1" id="audioLevel" oninput="setAudioLabel()">
+            <label for="audioLevel" id="audioLevelText">Boost level: 0 dB.</label>
+            <input type="range" class="custom-range" value="0" min="0" max="100" step="1" id="audioLevel" oninput="setAudioLabel()">
 
             <!-- Text field for youtube links -->
             <div class="input-group mb-3">
