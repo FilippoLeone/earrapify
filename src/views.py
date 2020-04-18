@@ -20,11 +20,9 @@ def process_file(request):
     file_path = os.path.join('/tmp', filename)
     with open(file_path, 'wb') as output_file:
         shutil.copyfileobj(input_file, output_file)
-    print(output_file)
-    print(db)
     if boost_track(file_path, filename, db):
         return Response(json_body={'filename': filename})
-
+        
 @view_config(route_name='download')
 def download_file(request):
     filename = request.GET['filename']
