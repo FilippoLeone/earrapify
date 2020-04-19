@@ -4,6 +4,8 @@ Earrapify 🗣️ your songs via a web interface.
 
 ## Getting Started
 
+**NOTE** This project was created with Python-3.9.0a5
+
 ```
 git clone <repository>
 cd earrapify 
