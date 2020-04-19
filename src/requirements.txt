@@ -4,3 +4,4 @@ pyramid
 pyramid-chameleon
 asgiref
 uvicorn
+supervisor
